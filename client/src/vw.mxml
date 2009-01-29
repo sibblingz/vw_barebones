@@ -18,5 +18,6 @@
 		
 		]]>
 	</mx:Script>
+	<mx:Label verticalCenter="0" horizontalCenter="0" text="Hello Virtual World!" fontSize="17" fontWeight="normal"/>
 
 </framework:FrameworkApplication>
