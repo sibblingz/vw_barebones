@@ -2,7 +2,7 @@ package vw.app.modules
 {
 	import framework.app.controllers.BackController;
 	import framework.app.modules.CodeModule;
-	import framework.app.modules.ModelsCache;
+	import framework.app.modules.caches.ModelsCache;
 	import framework.applications.IStateMachine;
 
 	public class <%= class_name -%>CodeModule extends CodeModule
@@ -25,7 +25,7 @@ package vw.app.modules
 		{
 		}
 
-		override public function constructInitialParams( extraModuleParams:Object ):Object
+		override protected function constructInitialParams( extraModuleParams:Object ):Object
 		{
 			return {};
 		}
