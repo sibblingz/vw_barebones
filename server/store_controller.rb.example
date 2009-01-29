@@ -1,0 +1,24 @@
+#EXAMPLE CONTROLLER
+#class StoreController < VWController
+#  
+#  def init
+#    store = Store.find_by_name(params[:store_name])
+#    items = store.items
+#    wearable_items = items.reject{|item| item.class != WearableItem}
+#    usable_items = items.reject{|item| item.class != UsableItem}
+#    @response[:models] = [wearable_items, usable_items]
+#    render
+#  end
+#  
+#  def checkout
+#    items_to_buy = params[:item_ids]
+#    @avatar.cart.add(items_to_buy)
+#    @avatar.cart.purchase_items!
+#    @response[:avatar_dollars] = @avatar.dollars
+#    @response[:total_price] = @avatar.cart.total_price
+#    @response[:models] = [@avatar]
+#
+#    render
+#  end
+#  
+#end

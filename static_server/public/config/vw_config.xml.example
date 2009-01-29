@@ -1,0 +1,9 @@
+<vwConfig>
+    <serverHostname>localhost</serverHostname>
+    <serverPort>3000</serverPort>
+    <smartfoxHostname>localhost</smartfoxHostname>
+    <smartfoxPort>9339</smartfoxPort>
+    <swfServerHostname>localhost</swfServerHostname>
+    <swfServerPort>3000</swfServerPort>
+    <httpServiceURL>http://localhost:3001/vw</httpServiceURL>
+</vwConfig>

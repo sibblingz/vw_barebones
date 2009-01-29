@@ -1,0 +1,13 @@
+#Additional configuration params for use in the application get defined here
+#See YAML cookbook for help with YAML:  http://www.nt.ntnu.no/users/haugwarb/Programming/YAML/YAML_for_ruby.html
+test:
+  memcache_servers:
+    - localhost:11211
+
+development:
+  memcache_servers:
+    - localhost:11211
+
+production:
+  memcache_servers:
+    - localhost:11211

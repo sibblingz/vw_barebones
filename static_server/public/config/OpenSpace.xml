@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	OpenSpace configuration file
+	v1.0
+-->
+
+<OpenSpace>
+
+	<!-- OpenSpace Isometric Engine main parameters. If one of the following params is missing, default values are applied -->
+	<TileSize>60</TileSize> 									<!-- Isometric tile main diagonal length (tile width in orthogonal coordinates) -->
+	<TileRatio>0.5</TileRatio> 									<!-- Ratio between tile's width and height in orthogonal coordinates (valid values: 0.0->1.0) -->
+	<ShowTileElevation>1</ShowTileElevation> 					<!-- Show tile isometric elevation: set to 0 together with TileRatio = 1 for a top-down view -->
+	<ShowTilesGrid>0</ShowTilesGrid> 							<!-- Show tile wireframe (for debug purposes) -->
+	<ShowTilesFill>0</ShowTilesFill> 							<!-- Render tile faces, to better visualize the tile when a skin is not applied (for debug purposes) -->
+	<EnablePixelCollisionCheck>0</EnablePixelCollisionCheck> 	<!-- (See documentation) -->
+	<TileCustomParamsSeparator>|</TileCustomParamsSeparator> 	<!-- Separator between tiles custom parameters in map definition xml file (default: |) -->
+	<ProcessedTilesPerFrame>60</ProcessedTilesPerFrame> 		<!-- Number of tiles processed at each frame during the map rendering process (default: 60) -->
+
+	<!-- Controller parameters -->
+	<ControllerType>mouse</ControllerType> 	<!-- Controller to be used; valid values: mouse, keyboard (default: mouse) -->
+	<Use8Directions>1</Use8Directions> 		<!-- Avatars can move along 8 directions instead of 4 (default: 1) -->
+	<UseHandCursor>1</UseHandCursor> 		<!-- For mouse controller only: show hand cursor over clickable tiles (default: 1) -->
+	
+	<!-- Scrolling parameters -->
+	<UseSmartScrolling>1</UseSmartScrolling> 			<!-- Activate "smart scrolling": when tiles are not visible, they are removed from stage to improve performance (default: 1) -->
+	<ScrollSensorSize>25</ScrollSensorSize> 			<!-- Size of the scroll sensor area, as a percentage of the main view size (default: 75) -->
+	<ScrollPercentage>50</ScrollPercentage> 			<!-- Scroll amount, as a percentage of the scroll sensor area (default: 50) -->
+	<ScrollTime>250</ScrollTime> 						<!-- Duration, in milliseconds, of a 100 pixel scrolling (default: 250; correction is applied depending on the required scroll amount) -->
+	<ScrollTransition>easeOutSine</ScrollTransition> 	<!-- Scroll transition type, see http://hosted.zeh.com.br/tweener/docs/en-us/misc/transitions.html (default: easeOutSine) -->
+	<UseContinuousScrolling>1</UseContinuousScrolling> 	<!-- Scroll map continuously (default: 0; when 1, ScrollPercentage, ScrollTime and ScrollTransition parameters have no effect) -->
+	
+	<!-- Avatar parameters -->
+	<EnableAvatarMouseEvents>1</EnableAvatarMouseEvents> 	<!-- Enable click/rollOver/rollOut mouse events on avatars (default: 1) - independent from the selected controller type -->
+	<UseHandCursorOnAvatars>1</UseHandCursorOnAvatars> 		<!-- Show hand cursor on avatars if mouse events are enabled (default: 1) -->
+	
+	<AvatarTypes>
+		<!-- Parameters:
+		     - className: linkage class name of the avatar movieclip in Flash library
+		     - animTime: duration in milliseconds of the movement from tile to tile along N/E/S/W directions (correction is applied for other directions)
+			 - stature: height of the avatar (used to check under passages)
+			 - cp0,cp1,cp2,cp3: avatar's control points (see documentation) -->
+		<AvatarType type="dummy" className="DummyAvatarMovieClip" animTime="300" stature="30" cp0="0,5" cp1="-10,0" cp2="0,-5" cp3="10,0" />
+		<AvatarType type="simple" className="SimpleAvatarMovieClip" animTime="250" stature="30" />
+		<AvatarType type="box" className="BoxAvatarMovieClip" animTime="1000" stature="31" cp0="0,8" cp1="-16,0" cp2="0,-8" cp3="16,0" />
+		<AvatarType type="custom" className="avatars.CustomAvatarMovieClip" animTime="400" stature="100" cp0="0,8" cp1="-16,0" cp2="0,-8" cp3="16,0" />
+	</AvatarTypes>
+	
+	
+	<!--  -->
+	<Avatar2TerrainTable></Avatar2TerrainTable>
+	
+</OpenSpace>
