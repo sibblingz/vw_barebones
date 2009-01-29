@@ -4,6 +4,8 @@ development:
   username: root
   password: 
   socket: /var/run/mysqld/mysqld.sock 
+# If you are on Mac OS X, this line should probably say
+# socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
@@ -18,13 +20,6 @@ production:
 test:
   adapter: mysql
   database: vw_test
-  username: root
-  password: 
-  socket: /var/run/mysqld/mysqld.sock
-
-actionscript_test:
-  adapter: mysql
-  database: vw_actionscript_test
   username: root
   password: 
   socket: /var/run/mysqld/mysqld.sock
