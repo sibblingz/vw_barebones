@@ -15,6 +15,7 @@ class FrameworkController < ApplicationController
   def initialize_response
     @response = {}
     @response["_cmd"] = params["_cmd"]
+    @response["hashkey"] = params["hashkey"]
   end
 
   def sfs_render
