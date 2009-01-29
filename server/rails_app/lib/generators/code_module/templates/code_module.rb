@@ -1,36 +1,33 @@
 package vw.app.modules
 {
-        import framework.app.controllers.BackController;
-        import framework.app.modules.CodeModule;
-        import framework.app.modules.ModelsCache;
-        import framework.applications.IStateMachine;
+	import framework.app.controllers.BackController;
+	import framework.app.modules.CodeModule;
+	import framework.app.modules.ModelsCache;
+	import framework.applications.IStateMachine;
 
-        public class <%= class_name -%>CodeModule extends CodeModule
-        {
+	public class <%= class_name -%>CodeModule extends CodeModule
+	{
+		public function <%= class_name -%>CodeModule(backController:BackController, application:IStateMachine, modelsCache:ModelsCache, stateName:String)
+		{
+			super(backController, application, modelsCache, stateName);
+		}
+		
+		override public function getRequiredViews():Array
+		{
+			return [];
+		}
+		
+		override public function wireModelsToViews():void
+		{
+		}
 
-                public function <%= class_name -%>CodeModule(backController:BackController, application:IStateMachine, modelsCache:ModelsCache, stateName:String)
-                {
-                       super(backController, application, modelsCache, stateName);
-                }
+		override public function customInitialRequestFinished(params:Object):void
+		{
+		}
 
-                override public function getRequiredViews():Array
-                {
-                        return [];
-                }
-
-                override public function wireModelsToViews():void
-                {
-              
-                }
-
-                override public function customInitialRequestFinished(params:Object):void
-                {
-                        
-                }
-                
-                override public function constructInitialParams( extraModuleParams:Object ):Object
-                {
-                        return {};
-                }
-        }
+		override public function constructInitialParams( extraModuleParams:Object ):Object
+		{
+			return {};
+		}
+	}
 }
